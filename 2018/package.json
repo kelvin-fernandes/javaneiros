@@ -4,16 +4,21 @@
   "description": "event html template",
   "main": "gulpfile.js",
   "scripts": {
+    "start": "gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "colorlib",
   "license": "ISC",
-  "dependencies": {
+  "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.1.0",
     "gulp-concat": "^2.6.1",
     "gulp-livereload": "^3.8.1",
     "gulp-ruby-sass": "^3.0.0",
-    "gulp-uglify": "^3.0.0"
+    "gulp-sass": "^4.0.1",
+    "gulp-uglify": "^3.0.0",
+    "node-sass": "^4.9.3",
+    "gulp-watch": "^5.0.1",
+    "gulp-webserver": "^0.9.1"
   }
 }

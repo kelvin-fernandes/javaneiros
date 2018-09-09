@@ -4,11 +4,12 @@
 
 'use strict';
 const gulp = require('gulp');
-const sass = require("gulp-ruby-sass");
+const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
 const livereload = require("gulp-livereload");
+var webserver = require('gulp-webserver');
 
 
 
@@ -37,8 +38,13 @@ gulp.task('mincss',function () {
 
 
 gulp.task('watch',function () {
-    livereload.listen();
     gulp.watch('assets/scss/**/*.scss',['style'])
+    gulp.src('').pipe(webserver({
+        livereload: true,
+        directoryListing: true,
+        open: true,
+        port: 8080
+    }))
 });
 
 gulp.task('default',['style','watch']);
