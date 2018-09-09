@@ -14,7 +14,8 @@ var webserver = require('gulp-webserver');
 
 
 gulp.task('style',function () {
-    sass('assets/scss/**/*.scss',{ style: 'expanded' })
+    gulp.src('assets/scss/**/*.scss')
+        .pipe(sass().on('error', sass.logError))
         .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9'))
         .pipe(gulp.dest('assets/css/'))
         .pipe(livereload());
@@ -38,7 +39,8 @@ gulp.task('mincss',function () {
 
 
 gulp.task('watch',function () {
-    gulp.watch('assets/scss/**/*.scss',['style'])
+    livereload.listen();
+    gulp.watch('assets/scss/**/*.scss', gulp.start('style'))
     gulp.src('').pipe(webserver({
         livereload: true,
         directoryListing: true,
