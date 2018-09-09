@@ -39,8 +39,8 @@ gulp.task('mincss',function () {
 
 
 gulp.task('watch',function () {
-    livereload.listen();
-    gulp.watch('assets/scss/**/*.scss', gulp.start('style'))
+    // livereload.listen();
+    gulp.watch('assets/scss/**/*.scss', ['style'])
     gulp.src('').pipe(webserver({
         livereload: true,
         directoryListing: true,
