@@ -9,7 +9,7 @@ header{
   .menu{
     position: relative;
   }
-
+  
   .logo{
     padding-top: 0;
     padding-bottom: 0;
@@ -19,7 +19,7 @@ header{
       margin-right: 3px;
     }
   }
-
+  
   ul.menu li{
     a.nav-link{
       padding: 20px 12px !important;
@@ -29,21 +29,14 @@ header{
       display: block;
       text-transform: uppercase;
       color: $color-light;
+      transition: all 300ms ease-out;
       &:hover{
-        color: $color-primary;
+        color: $color-gray;
+        transform: translateY(-5px);
       }
     }
+    
   }
-
-  ul.menu .search_btn{
-    padding: 16px 8px !important;
-    color: $color-light;
-    a{
-      font-size: 30px;
-    }
-  }
-
-
 
   li{
     ul{
@@ -76,6 +69,11 @@ header{
     }
   }
 
+  .navbar-toggler {
+    border: 1px solid white;
+    color: white;
+  }
+  
 }
 
 .navbar{
@@ -84,18 +82,31 @@ header{
 
 //sticky header
 header.sticky_header{
-  background-color: #18181c;
+  background-color: hsla(0, 0%, 99%, 0.9);
+  
   margin: 0;
   padding: 5px;
-    -webkit-box-shadow: 0 0 42px rgba(0,0,0,0.08);
-    box-shadow: 0 0 42px rgba(0,0,0,0.08);
-    @include single-transition(all,ease-in-out,0.4s);
+  -webkit-box-shadow: 0 0 42px rgba(0,0,0,0.08);
+  box-shadow: 0 0 42px rgba(0,0,0,0.08);
+  @include single-transition(all,ease-in-out,0.4s);
+  
+  &:hover {
+    background-color: hsla(0, 0%, 99%, 1);
+  }
+  
+  a.nav-link {
+    color: black !important;
+  }
+
+  .navbar-toggler {
+    border: 1px solid black;
+    color: black;
+  }
 }
 
 //menu button
 .navbar-toggler{
-  border: 1px solid $color-light;
-  color: $color-light;
+  transition: all 350ms ease-out;
   padding: 5px 10px;
   font-size: 22px;
   outline: 0 !important;
@@ -114,17 +125,23 @@ header.sticky_header{
 
 
 @media(max-width:767px){
-    header{
-      background-color: #18181c;
-      margin: 0;
-      -webkit-box-shadow: 0 0 42px rgba(0,0,0,0.08);
-      box-shadow: 0 0 42px rgba(0,0,0,0.08);
-      @include single-transition(all,ease-in-out,0.4s);
-
-      .container{
-        padding: 15px !important;
+  header{
+    margin: 0;
+    -webkit-box-shadow: 0 0 42px rgba(0,0,0,0.08);
+    box-shadow: 0 0 42px rgba(0,0,0,0.08);
+    @include single-transition(all,ease-in-out,0.4s);
+    
+    .collapse.show {
+      background: hsla(0, 0%, 99%, 0.9);
+      a.nav-link {
+        color: black;
       }
     }
+
+    .container{
+      padding: 15px !important;
+    }
+  }
   header li > ul{
     position: static;
     visibility: visible;

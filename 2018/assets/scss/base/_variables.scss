@@ -81,3 +81,62 @@ $font: 'Montserrat', sans-serif;
   -moz-box-shadow: $hoff $voff $blur $spread $color;
   box-shadow: $hoff $voff $blur $spread $color;
 }
+
+
+$screen-sm-max: 576px;
+// Small tablets (portrait view)
+$screen-md-max: 1025px;
+// Tablets and small desktops
+$screen-lg-max: 1441px;
+// Large tablets and desktops
+$screen-xl-max: 1899px;
+
+$screen-sm: 540px;
+$screen-md: 720px;
+$screen-lg: 960px;
+$screen-xl: 1140p;
+
+@mixin max-sm {
+  @media (max-width: #{$screen-sm}) { @content; }  
+}
+
+@mixin max-md {
+  @media (max-width: #{$screen-md}) { @content; }  
+}
+
+@mixin max-lg {
+  @media (max-width: #{$screen-lg}) { @content; }  
+}
+
+@mixin max-xl {
+  @media (max-width: #{$screen-xl}) { @content; }  
+}
+
+
+@mixin min-sm {
+  @media (min-width: #{$screen-sm}) { @content; }  
+}
+
+@mixin min-md {
+  @media (min-width: #{$screen-md}) { @content; }  
+}
+
+@mixin min-lg {
+  @media (min-width: #{$screen-lg}) { @content; }  
+}
+
+@mixin min-xl {
+  @media (min-width: #{$screen-xl}) { @content; }  
+}
+
+@mixin laptop {
+    @media (max-width: #{$screen-md-max}) { @content; }
+}
+
+@mixin desktop {
+    @media (max-width: #{$screen-lg-max}) { @content; }
+}
+
+@mixin extra-large {
+    @media (max-width: #{$screen-xl-max}) { @content; }
+}
