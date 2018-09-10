@@ -1,62 +1,5 @@
 .home-cover{
   position: relative;
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  align-items: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 100vh;
-  
-  .cover-content {
-    text-align: center;
-    color: white;
-    
-    @include laptop {
-      font-size: 1rem;
-    }
-
-    h1 {
-      width: fit-content;
-      margin: auto;
-      color: white;
-      text-transform: uppercase;
-      
-      @include min-lg {
-        font-size: 5.5rem;
-      }
-      
-      span {
-        font-size: .8rem;
-        font-weight: 500;
-        display: block;
-        width: 100%;
-        color: white;
-        @include min-lg {
-          font-size: 4rem;
-        }
-      }
-    }
-    
-    .cover-date {
-      text-transform: uppercase;
-      color: white;
-      font-size: .8rem;
-      font-weight: 400;
-      margin: .8ch 0;
-      display: block;
-      width: 100%;
-
-      @include min-lg {
-        font-size: 1.5rem;
-      }
-    }
-    
-    a {
-      margin-top: 3ch;
-    }
-    
-  }
 }
 
 .cover_slider{
@@ -112,17 +55,17 @@
         .cover-xl-text{
           opacity: 0;
           text-transform: uppercase;
-          font-size: 90px;
+          font-size: 70px;
           font-weight: 900;
           line-height: 1.1;
-          color: $color-primary;
+          color: $color-light;
           -webkit-transform: translateY(20px);
           transform: translateY(20px);
           -webkit-transition: all 0.4s 600ms ease-in-out;
           transition: all 0.4s 600ms ease-in-out;
         }
         .cover-date{
-          font-size: 18px;
+          font-size: 22px;
           color:#ffffff;
           margin-bottom: 25px;
           text-transform: uppercase;
@@ -387,11 +330,12 @@
     .cover_item{
       .slider_content{
         .slider-content-inner{
+          word-break: break-word !important;
           .cover-title{
-            font-size: 18px;
+            font-size: 18px;            
           }
           .cover-xl-text{
-            font-size: 46px;
+            font-size: 46px;            
           }
           .cover-date{
             font-size: 14px;
