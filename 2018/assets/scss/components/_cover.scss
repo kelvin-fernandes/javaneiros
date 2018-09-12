@@ -9,6 +9,7 @@
   position: relative;
   list-style: none;
   word-break: break-all;
+  z-index: -1;
   .slider-content-center{
     max-width: 800px;
     margin: 0 auto;
@@ -143,11 +144,11 @@
   z-index: 999;
   text-align: center;
   padding: 0;
-  margin: 0 auto;
+  margin: -20px auto;
   top: -40px;
   .cover_dots{
     padding: 15px 90px;
-    margin: 0 auto;
+    margin: -15px auto;
     text-align: center;
     float: none;
     width: auto;
@@ -206,7 +207,7 @@
       .footer_social{
         list-style: none;
         padding: 5px 15px;
-        margin: 0;
+        margin: -30px;
         li{
           display: inline-block;
           margin:5px ;
