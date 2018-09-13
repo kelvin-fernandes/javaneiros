@@ -84,8 +84,7 @@ ul.nosyely_list {
   margin-bottom: 25px; }
   .section_title .title {
     text-transform: uppercase;
-    padding: 10px 0;
-    font-size: 36px; }
+    padding: 10px 0; }
     .section_title .title:before {
       width: 30px;
       content: " ";
@@ -1529,7 +1528,8 @@ footer {
   display: block;
   position: relative;
   list-style: none;
-  word-break: break-all; }
+  word-break: break-all;
+  z-index: -1; }
   .cover_slider .slider-content-center {
     max-width: 800px;
     margin: 0 auto;
@@ -1650,11 +1650,11 @@ footer {
   z-index: 999;
   text-align: center;
   padding: 0;
-  margin: 0 auto;
+  margin: -20px auto;
   top: -40px; }
   .cover_nav .cover_dots {
     padding: 15px 90px;
-    margin: 0 auto;
+    margin: -15px auto;
     text-align: center;
     float: none;
     width: auto;
@@ -1694,7 +1694,7 @@ footer {
   .cover_nav .footer_social {
     list-style: none;
     padding: 5px 15px;
-    margin: 0; }
+    margin: -30px; }
     .cover_nav .footer_social li {
       display: inline-block;
       margin: 5px; }
