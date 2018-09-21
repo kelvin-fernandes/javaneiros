@@ -1,6 +1,18 @@
 .home-cover{
   position: relative;
 }
+
+#egg {
+  z-index: 0;
+  position: fixed;
+  top: 40vh;
+  right: 150px;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  font-size: 8px;
+  display: none;
+}
+
 .cover_slider{
   padding: 0;
   margin: 0;
@@ -9,7 +21,7 @@
   position: relative;
   list-style: none;
   word-break: break-all;
-  z-index: -1;
+  z-index: 0;
   .slider-content-center{
     max-width: 800px;
     margin: 0 auto;

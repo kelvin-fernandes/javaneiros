@@ -20,6 +20,7 @@
     padding: 1ch;
     border-radius: 3px;
 
+
     h4 {
       font-size: 16px;
       line-height: 19px;
@@ -45,6 +46,22 @@
       span {
         margin: 0;
         padding: 0;
+      }
+    }
+
+    &:hover {
+      background-color: $color-primary;
+
+      h4 {
+        color: white;
+      }
+
+      p {
+        color: $color-gray;
+      }
+
+      small span{
+        color: $color-orange;
       }
     }
 

@@ -1521,6 +1521,18 @@ footer {
 .home-cover {
   position: relative; }
 
+#egg {
+  z-index: 0;
+  position: fixed;
+  top: 40vh;
+  right: 150px;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  text-orientation: upright;
+  font-size: 8px;
+  display: none; }
+
 .cover_slider {
   padding: 0;
   margin: 0;
@@ -1529,7 +1541,7 @@ footer {
   position: relative;
   list-style: none;
   word-break: break-all;
-  z-index: -1; }
+  z-index: 0; }
   .cover_slider .slider-content-center {
     max-width: 800px;
     margin: 0 auto;
@@ -2081,6 +2093,14 @@ footer {
       .agenda .evento small span {
         margin: 0;
         padding: 0; }
+    .agenda .evento:hover {
+      background-color: #007f3b; }
+      .agenda .evento:hover h4 {
+        color: white; }
+      .agenda .evento:hover p {
+        color: #f0f2f6; }
+      .agenda .evento:hover small span {
+        color: #f79257; }
 
 .event_box {
   margin: 70px 0; }
