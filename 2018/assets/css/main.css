@@ -1530,7 +1530,7 @@ footer {
       -ms-writing-mode: tb-rl;
           writing-mode: vertical-rl;
   text-orientation: upright;
-  font-size: 8px;
+  font-size: 20px;
   display: none; }
 
 .cover_slider {
@@ -1981,12 +1981,28 @@ footer {
 
 .price_box {
   position: relative;
-  padding: 75px 30px;
+  padding: 30px 0;
   margin-bottom: 30px;
   text-align: center;
   background-color: #f0f2f6;
+  height: 65vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-transition: all ease-in-out 0.4s;
   transition: all ease-in-out 0.4s; }
+  .price_box .alert {
+    font-size: 12px;
+    color: red; }
   .price_box .price_highlight {
     background-color: #007f3b;
     font-weight: 700;
@@ -2027,7 +2043,16 @@ footer {
       font-size: 14px;
       font-weight: 400; }
   .price_box .price_footer {
-    margin-top: 30px; }
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1; }
   .price_box:hover {
     background-color: #ffffff;
     -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
@@ -2094,13 +2119,13 @@ footer {
         margin: 0;
         padding: 0; }
     .agenda .evento:hover {
-      background-color: #007f3b; }
-      .agenda .evento:hover h4 {
-        color: white; }
-      .agenda .evento:hover p {
-        color: #f0f2f6; }
-      .agenda .evento:hover small span {
-        color: #f79257; }
+      background-color: #007f3b;
+      -webkit-transition: all ease-in-out 0.4s;
+      transition: all ease-in-out 0.4s; }
+      .agenda .evento:hover small span, .agenda .evento:hover p, .agenda .evento:hover h4 {
+        color: #ffffff;
+        -webkit-transition: all ease-in-out 0.4s;
+        transition: all ease-in-out 0.4s; }
 
 .event_box {
   margin: 70px 0; }

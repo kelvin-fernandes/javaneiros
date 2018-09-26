@@ -51,17 +51,11 @@
 
     &:hover {
       background-color: $color-primary;
+      @include single-transition(all, ease-in-out,0.4s);
 
-      h4 {
-        color: white;
-      }
-
-      p {
-        color: $color-gray;
-      }
-
-      small span{
-        color: $color-orange;
+      small span, p, h4 {
+        color: $color-light;
+        @include single-transition(all, ease-in-out,0.4s);
       }
     }
 

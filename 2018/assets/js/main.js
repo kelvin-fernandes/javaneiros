@@ -83,7 +83,7 @@ $(document).ready(function() {
         onDrag: function() {
             contadorParaOEgg++;
             if (contadorParaOEgg == contadorParaMostrar ) {
-                contadorParaMostrar *= parseInt(contadorParaMostrar, undefined);
+                contadorParaMostrar += parseInt(contadorParaMostrar, undefined);
                 $('#egg').show();
             }else {
                 $('#egg').hide();
