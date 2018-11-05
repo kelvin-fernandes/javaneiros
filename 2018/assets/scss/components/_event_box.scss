@@ -20,6 +20,7 @@
     padding: 1ch;
     border-radius: 3px;
 
+
     h4 {
       font-size: 16px;
       line-height: 19px;
@@ -45,6 +46,16 @@
       span {
         margin: 0;
         padding: 0;
+      }
+    }
+
+    &:hover {
+      background-color: $color-primary;
+      @include single-transition(all, ease-in-out,0.4s);
+
+      small span, p, h4 {
+        color: $color-light;
+        @include single-transition(all, ease-in-out,0.4s);
       }
     }
 

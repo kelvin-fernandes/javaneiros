@@ -23,7 +23,6 @@ $(window).load(function() {
     $('.loader').delay(500).fadeOut('slow');
 });
 
-
 $(document).ready(function() {
 
     'use strict';
@@ -68,9 +67,11 @@ $(document).ready(function() {
     /* ==============================================
      SLIDER
      =============================================== */
+    var contadorParaOEgg = 0;
+    var contadorParaMostrar = 3;
     $(".cover_slider").owlCarousel({
-        loop:true,
-        autoplay:true,
+        loop:false,
+        autoplay:false,
         smartSpeed:1000,
         autoplayHoverPause:false,
         dots:true,
@@ -79,6 +80,15 @@ $(document).ready(function() {
         animateOut: 'fadeOut',
         animateIn: 'fadeIn',
         // dotsContainer: '.cover_dots'
+        onDrag: function() {
+            contadorParaOEgg++;
+            if (contadorParaOEgg == contadorParaMostrar ) {
+                contadorParaMostrar += parseInt(contadorParaMostrar, undefined);
+                $('#egg').show();
+            }else {
+                $('#egg').hide();
+            }
+        }
     });
 
     $(".brand_carousel").owlCarousel({
